@@ -1,6 +1,6 @@
 # Sistema de Eventos e Balanceamento
 
-## [Nome do Jogo — A Definir]
+## VOLUTION
 
 **Versão:** 1.0
 **Data:** Dezembro 2025

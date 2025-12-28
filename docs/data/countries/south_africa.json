@@ -1,0 +1,450 @@
+{
+  "country": {
+    "id": "south_africa",
+    "name": {
+      "pt": "África do Sul",
+      "en": "South Africa",
+      "es": "Sudáfrica"
+    },
+    "flag_emoji": "🇿🇦",
+    "capital": "Pretoria (executive), Cape Town (legislative), Bloemfontein (judicial)",
+    "region": "southern_africa",
+    "difficulty": "hard",
+    "difficulty_reason": "Desigualdade extrema, infraestrutura deteriorada, desemprego massivo, legado do apartheid",
+    "start_year": 2025,
+    "government_type": "parliamentary_republic",
+    "electoral_cycle_months": 60,
+    "next_election_month": 48
+  },
+
+  "economy": {
+    "gdp_billions_usd": 405,
+    "gdp_per_capita_usd": 6800,
+    "gdp_growth_percent": 1.2,
+    "inflation_percent": 5.5,
+    "unemployment_percent": 32.0,
+    "youth_unemployment_percent": 59.0,
+    "debt_to_gdp_percent": 73,
+    "gini_coefficient": 0.63,
+    "gini_note": "Most unequal country in the world",
+    "reserves_billions_usd": 62,
+    "interest_rate_percent": 8.25,
+    "currency": {
+      "code": "ZAR",
+      "name": "South African Rand",
+      "exchange_rate_usd": 18.5,
+      "volatile": true
+    },
+    "trade_balance_billions_usd": 8,
+    "main_exports": ["gold", "platinum", "diamonds", "coal", "iron_ore", "vehicles"],
+    "main_imports": ["oil", "machinery", "electronics", "vehicles"],
+    "economic_freedom_index": 55.7,
+    "load_shedding_hours_daily": 6
+  },
+
+  "sectors": {
+    "mining": {
+      "gdp_share_percent": 8.0,
+      "employment_share_percent": 2.5,
+      "global_platinum_share_percent": 70,
+      "global_gold_share_percent": 5,
+      "global_chromium_share_percent": 35,
+      "decline_trend": true
+    },
+    "services": {
+      "gdp_share_percent": 67.0,
+      "employment_share_percent": 72.0,
+      "includes": ["finance", "retail", "tourism", "telecom"]
+    },
+    "manufacturing": {
+      "gdp_share_percent": 12.0,
+      "employment_share_percent": 10.0,
+      "automotive_exports": true,
+      "deindustrialization": true
+    },
+    "agriculture": {
+      "gdp_share_percent": 2.5,
+      "employment_share_percent": 5.0,
+      "commercial_farming_concentrated": true,
+      "land_reform_pending": true
+    },
+    "energy": {
+      "gdp_share_percent": 3.0,
+      "eskom_crisis": true,
+      "coal_dependent_percent": 85,
+      "renewable_transition_slow": true,
+      "load_shedding": true
+    }
+  },
+
+  "politics": {
+    "approval_rating": 35,
+    "stability_index": 48,
+    "polarization_index": 55,
+    "legitimacy_index": 52,
+    "internal_tension": 60,
+    "corruption_perception_index": 41,
+    "press_freedom_index": 62,
+    "democracy_index": 7.05,
+    "ruling_party": "ANC",
+    "coalition": "GNU",
+    "years_in_power": 31,
+    "parliament_majority": false,
+    "coalition_fragile": true
+  },
+
+  "social_groups": {
+    "black_majority": {
+      "name": {
+        "pt": "Maioria Negra",
+        "en": "Black Majority"
+      },
+      "population_share": 0.81,
+      "economic_power": 35,
+      "mobilization_capacity": 70,
+      "organization_level": 55,
+      "current_opinion": 25,
+      "ideology_preferences": {
+        "economic": -30,
+        "liberties": 25,
+        "identity": -20,
+        "change": 40
+      },
+      "key_demands": ["jobs", "land", "services", "equality"],
+      "historical_anc_loyalty": "declining",
+      "economic_frustration": "high"
+    },
+    "white_minority": {
+      "name": {
+        "pt": "Minoria Branca",
+        "en": "White Minority"
+      },
+      "population_share": 0.08,
+      "economic_power": 50,
+      "mobilization_capacity": 30,
+      "organization_level": 55,
+      "current_opinion": -20,
+      "ideology_preferences": {
+        "economic": 50,
+        "liberties": 40,
+        "identity": 30,
+        "change": -25
+      },
+      "key_demands": ["property_rights", "security", "anti_bee", "farm_safety"],
+      "emigration_rate": "high",
+      "economic_overrepresentation": true
+    },
+    "coloured_community": {
+      "name": {
+        "pt": "Comunidade Coloured",
+        "en": "Coloured Community"
+      },
+      "population_share": 0.09,
+      "economic_power": 8,
+      "mobilization_capacity": 45,
+      "organization_level": 40,
+      "current_opinion": -10,
+      "ideology_preferences": {
+        "economic": 10,
+        "liberties": 35,
+        "identity": 5,
+        "change": 10
+      },
+      "key_demands": ["recognition", "jobs", "safety", "anti_gang"],
+      "concentrated_in": "Western Cape"
+    },
+    "indian_community": {
+      "name": {
+        "pt": "Comunidade Indiana",
+        "en": "Indian Community"
+      },
+      "population_share": 0.025,
+      "economic_power": 10,
+      "mobilization_capacity": 35,
+      "organization_level": 60,
+      "current_opinion": 5,
+      "ideology_preferences": {
+        "economic": 25,
+        "liberties": 30,
+        "identity": 15,
+        "change": 0
+      },
+      "key_demands": ["business_opportunities", "safety"],
+      "concentrated_in": "KwaZulu-Natal"
+    },
+    "trade_unions": {
+      "name": {
+        "pt": "Sindicatos (COSATU)",
+        "en": "Trade Unions (COSATU)"
+      },
+      "population_share": 0.12,
+      "economic_power": 20,
+      "mobilization_capacity": 80,
+      "organization_level": 85,
+      "current_opinion": 20,
+      "ideology_preferences": {
+        "economic": -50,
+        "liberties": 20,
+        "identity": -15,
+        "change": 25
+      },
+      "key_demands": ["wages", "jobs", "against_privatization", "labor_rights"],
+      "tripartite_alliance": true,
+      "strike_propensity": 75
+    },
+    "business_elite": {
+      "name": {
+        "pt": "Elite Empresarial",
+        "en": "Business Elite"
+      },
+      "population_share": 0.01,
+      "economic_power": 65,
+      "mobilization_capacity": 25,
+      "organization_level": 80,
+      "current_opinion": -15,
+      "ideology_preferences": {
+        "economic": 60,
+        "liberties": 35,
+        "identity": 10,
+        "change": 20
+      },
+      "key_demands": ["energy_stability", "crime_reduction", "deregulation", "bee_reform"],
+      "includes": ["mining_houses", "banks", "retail"],
+      "capital_flight_risk": "medium"
+    },
+    "youth": {
+      "name": {
+        "pt": "Juventude Desempregada",
+        "en": "Unemployed Youth"
+      },
+      "population_share": 0.25,
+      "economic_power": 3,
+      "mobilization_capacity": 70,
+      "organization_level": 35,
+      "current_opinion": -25,
+      "ideology_preferences": {
+        "economic": -35,
+        "liberties": 40,
+        "identity": -10,
+        "change": 60
+      },
+      "key_demands": ["jobs", "education", "opportunity", "radical_change"],
+      "eff_support_base": true,
+      "unrest_potential": "very_high"
+    },
+    "rural_poor": {
+      "name": {
+        "pt": "População Rural Pobre",
+        "en": "Rural Poor"
+      },
+      "population_share": 0.20,
+      "economic_power": 5,
+      "mobilization_capacity": 40,
+      "organization_level": 30,
+      "current_opinion": 30,
+      "ideology_preferences": {
+        "economic": -25,
+        "liberties": -10,
+        "identity": 15,
+        "change": 20
+      },
+      "key_demands": ["land", "services", "traditional_authority"],
+      "traditional_leaders_influence": true
+    },
+    "anc_cadres": {
+      "name": {
+        "pt": "Quadros do ANC",
+        "en": "ANC Cadres"
+      },
+      "population_share": 0.03,
+      "economic_power": 30,
+      "mobilization_capacity": 75,
+      "organization_level": 80,
+      "current_opinion": 60,
+      "ideology_preferences": {
+        "economic": -20,
+        "liberties": -10,
+        "identity": -25,
+        "change": -10
+      },
+      "key_demands": ["power_retention", "deployment", "patronage"],
+      "state_capture_involvement": true
+    }
+  },
+
+  "ideology_position": {
+    "economic": -15,
+    "liberties": 25,
+    "identity": -20,
+    "change": 10,
+    "description": {
+      "economic": "Centro-esquerda: intervencionismo com elementos de mercado",
+      "liberties": "Democracia liberal com instituições sob pressão",
+      "identity": "Não-racialismo oficial, tensões raciais persistem",
+      "change": "Transformação lenta, frustração crescente"
+    }
+  },
+
+  "military": {
+    "active_personnel_thousands": 73,
+    "reserve_personnel_thousands": 15,
+    "military_budget_billions_usd": 3.5,
+    "military_budget_percent_gdp": 0.9,
+    "equipment_quality_index": 40,
+    "morale_index": 50,
+    "loyalty_index": 70,
+    "nuclear_capability": false,
+    "nuclear_history": "Dismantled program in 1989",
+    "power_projection_regional": true,
+    "peacekeeping_missions": ["DRC", "Sudan", "Mozambique"]
+  },
+
+  "diplomacy": {
+    "un_security_council": false,
+    "african_union_leader": true,
+    "memberships": ["UN", "BRICS", "G20", "AU", "SADC", "Commonwealth"],
+    "non_alignment_tradition": true,
+    "soft_power_index": 48,
+    "relations": {
+      "usa": {
+        "opinion": 25,
+        "trade_dependency_percent": 6,
+        "ideological_alignment": 15,
+        "historical_tension": "low",
+        "key_issues": ["brics_neutral", "agoa", "russia_stance"]
+      },
+      "china": {
+        "opinion": 50,
+        "trade_dependency_percent": 18,
+        "ideological_alignment": 0,
+        "key_issues": ["investment", "brics", "trade"]
+      },
+      "russia": {
+        "opinion": 45,
+        "trade_dependency_percent": 2,
+        "key_issues": ["brics", "non_alignment", "historical_anc_support"]
+      },
+      "india": {
+        "opinion": 50,
+        "key_issues": ["brics", "ibsa", "ocean"]
+      },
+      "brazil": {
+        "opinion": 55,
+        "key_issues": ["brics", "ibsa", "south_south"]
+      },
+      "european_union": {
+        "opinion": 40,
+        "trade_dependency_percent": 22,
+        "key_issues": ["trade", "investment", "values"]
+      },
+      "zimbabwe": {
+        "opinion": 40,
+        "key_issues": ["refugees", "quiet_diplomacy", "regional"]
+      }
+    }
+  },
+
+  "geography": {
+    "area_km2": 1221037,
+    "coastline_km": 2798,
+    "borders": ["namibia", "botswana", "zimbabwe", "mozambique", "eswatini", "lesotho"],
+    "enclaves": ["lesotho"],
+    "strategic_location": "Cape of Good Hope",
+    "strategic_resources": ["platinum", "gold", "diamonds", "chromium", "manganese", "coal"]
+  },
+
+  "demographics": {
+    "population_millions": 60,
+    "population_growth_percent": 1.0,
+    "median_age": 28,
+    "urban_percent": 68,
+    "literacy_percent": 95,
+    "life_expectancy": 65,
+    "fertility_rate": 2.3,
+    "hiv_prevalence_percent": 13,
+    "ethnic_composition": {
+      "black_african": 81,
+      "coloured": 9,
+      "white": 8,
+      "indian_asian": 2
+    },
+    "languages_official": ["zulu", "xhosa", "afrikaans", "english", "northern_sotho", "tswana", "sotho", "tsonga", "swazi", "venda", "ndebele"],
+    "hdi": 0.713
+  },
+
+  "unique_challenges": [
+    {
+      "id": "load_shedding",
+      "name": "Crise Energética (Load Shedding)",
+      "description": "Apagões diários destroem economia e qualidade de vida",
+      "affected_metrics": ["gdp", "investment", "approval", "services"]
+    },
+    {
+      "id": "extreme_inequality",
+      "name": "Desigualdade Extrema",
+      "description": "Maior Gini do mundo, legado do apartheid persiste economicamente",
+      "affected_metrics": ["stability", "tension", "crime"]
+    },
+    {
+      "id": "mass_unemployment",
+      "name": "Desemprego Massivo",
+      "description": "1/3 da força de trabalho desempregada, 60% dos jovens",
+      "affected_metrics": ["stability", "crime", "tension", "approval"]
+    },
+    {
+      "id": "state_capture_legacy",
+      "name": "Legado da Captura do Estado",
+      "description": "Corrupção sistêmica enfraqueceu instituições",
+      "affected_metrics": ["legitimacy", "services", "investment"]
+    },
+    {
+      "id": "crime_epidemic",
+      "name": "Epidemia de Crime",
+      "description": "Uma das maiores taxas de homicídio do mundo",
+      "affected_metrics": ["stability", "investment", "emigration", "quality_of_life"]
+    }
+  ],
+
+  "unique_opportunities": [
+    {
+      "id": "mineral_wealth",
+      "name": "Riqueza Mineral",
+      "description": "Maior reserva de platina, grande produtor de ouro e diamantes",
+      "potential_benefits": ["exports", "revenue", "strategic_importance"]
+    },
+    {
+      "id": "continental_gateway",
+      "name": "Gateway para África",
+      "description": "Economia mais desenvolvida do continente, hub financeiro",
+      "potential_benefits": ["trade", "investment", "services"]
+    },
+    {
+      "id": "renewable_potential",
+      "name": "Potencial Renovável",
+      "description": "Excelente sol e vento para transição energética",
+      "potential_benefits": ["energy", "jobs", "environment"]
+    },
+    {
+      "id": "young_population",
+      "name": "População Jovem",
+      "description": "Se empregada, pode impulsionar crescimento",
+      "potential_benefits": ["economy", "innovation"],
+      "requires": "job_creation"
+    }
+  ],
+
+  "special_mechanics": {
+    "bee_policy": true,
+    "land_reform_question": true,
+    "load_shedding_mechanic": true,
+    "coalition_politics": true,
+    "tripartite_alliance": true,
+    "xenophobia_risk": true
+  },
+
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2025-01-01",
+    "data_sources": ["World Bank", "IMF", "Stats SA", "SARB", "Freedom House"]
+  }
+}

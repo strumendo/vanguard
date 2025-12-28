@@ -1,8 +1,10 @@
 # GAME DESIGN DOCUMENT
 
-## [Nome do Jogo — A Definir]
+## VOLUTION
 
 **Grand Strategy Mobile com Simulação Geopolítica Real**
+
+> *"O destino gira. Você decide."*
 
 ---
 
@@ -24,10 +26,10 @@ A IA é integrada como motor narrativo e educacional, trazendo contexto históri
 
 | Campo | Valor |
 |-------|-------|
-| **Título** | [A Definir] |
+| **Título** | VOLUTION |
 | **Gênero** | Grand Strategy / Simulação Política |
 | **Plataformas** | iOS, Android (Mobile-first) |
-| **Público-alvo** | 18+ · Interessados em política, história e geopolítica |
+| **Público-alvo** | 16+ · Interessados em política, história e geopolítica |
 | **Classificação** | 16+ (temas políticos complexos) |
 | **Sessão típica** | 15-30 minutos |
 | **Modo de jogo** | Single-player (multiplayer em roadmap futuro) |

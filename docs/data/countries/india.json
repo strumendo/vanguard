@@ -1,0 +1,432 @@
+{
+  "country": {
+    "id": "india",
+    "name": {
+      "pt": "Índia",
+      "en": "India",
+      "es": "India"
+    },
+    "flag_emoji": "🇮🇳",
+    "capital": "New Delhi",
+    "region": "south_asia",
+    "difficulty": "medium",
+    "difficulty_reason": "Crescimento forte mas desigualdade, tensões religiosas, rivalidades regionais",
+    "start_year": 2025,
+    "government_type": "parliamentary_democracy",
+    "electoral_cycle_months": 60,
+    "next_election_month": 48
+  },
+
+  "economy": {
+    "gdp_billions_usd": 3750,
+    "gdp_per_capita_usd": 2650,
+    "gdp_growth_percent": 6.5,
+    "inflation_percent": 5.2,
+    "unemployment_percent": 8.0,
+    "debt_to_gdp_percent": 84,
+    "gini_coefficient": 0.35,
+    "reserves_billions_usd": 620,
+    "interest_rate_percent": 6.5,
+    "currency": {
+      "code": "INR",
+      "name": "Indian Rupee",
+      "exchange_rate_usd": 83
+    },
+    "trade_balance_billions_usd": -240,
+    "main_exports": ["refined_petroleum", "pharmaceuticals", "gems", "tech_services", "textiles"],
+    "main_imports": ["crude_oil", "gold", "electronics", "machinery"],
+    "economic_freedom_index": 52.9
+  },
+
+  "sectors": {
+    "services": {
+      "gdp_share_percent": 54.0,
+      "employment_share_percent": 32.0,
+      "includes": ["IT", "finance", "tourism", "retail"],
+      "it_services_global_rank": 2
+    },
+    "industry": {
+      "gdp_share_percent": 26.0,
+      "employment_share_percent": 22.0,
+      "manufacturing_push": "Make in India"
+    },
+    "agriculture": {
+      "gdp_share_percent": 17.0,
+      "employment_share_percent": 42.0,
+      "monsoon_dependent": true,
+      "productivity_index": 45
+    },
+    "technology": {
+      "gdp_share_percent": 8.0,
+      "global_tech_talent_share": 15,
+      "startup_ecosystem_rank": 3
+    },
+    "pharmaceuticals": {
+      "global_generic_share_percent": 20,
+      "vaccine_production_share_percent": 60
+    }
+  },
+
+  "politics": {
+    "approval_rating": 55,
+    "stability_index": 62,
+    "polarization_index": 65,
+    "legitimacy_index": 70,
+    "internal_tension": 50,
+    "corruption_perception_index": 40,
+    "press_freedom_index": 36,
+    "democracy_index": 7.04,
+    "ruling_party": "BJP",
+    "coalition": "NDA",
+    "years_in_power": 11,
+    "parliament_majority": true
+  },
+
+  "social_groups": {
+    "hindu_majority": {
+      "name": {
+        "pt": "Maioria Hindu",
+        "en": "Hindu Majority"
+      },
+      "population_share": 0.80,
+      "economic_power": 75,
+      "mobilization_capacity": 70,
+      "organization_level": 65,
+      "current_opinion": 60,
+      "ideology_preferences": {
+        "economic": 15,
+        "liberties": -10,
+        "identity": 50,
+        "change": 5
+      },
+      "key_demands": ["hindu_culture", "development", "national_pride"],
+      "hindutva_support_percent": 40
+    },
+    "muslim_minority": {
+      "name": {
+        "pt": "Minoria Muçulmana",
+        "en": "Muslim Minority"
+      },
+      "population_share": 0.14,
+      "economic_power": 8,
+      "mobilization_capacity": 55,
+      "organization_level": 50,
+      "current_opinion": -25,
+      "ideology_preferences": {
+        "economic": -15,
+        "liberties": 45,
+        "identity": -30,
+        "change": 15
+      },
+      "key_demands": ["religious_freedom", "safety", "equal_rights"],
+      "tension_with_bjp": true
+    },
+    "upper_castes": {
+      "name": {
+        "pt": "Castas Superiores",
+        "en": "Upper Castes"
+      },
+      "population_share": 0.20,
+      "economic_power": 55,
+      "mobilization_capacity": 50,
+      "organization_level": 70,
+      "current_opinion": 50,
+      "ideology_preferences": {
+        "economic": 30,
+        "liberties": -5,
+        "identity": 35,
+        "change": -20
+      },
+      "key_demands": ["merit_over_reservation", "economic_opportunity"]
+    },
+    "obc_backward_castes": {
+      "name": {
+        "pt": "Castas Atrasadas (OBC)",
+        "en": "Other Backward Castes"
+      },
+      "population_share": 0.40,
+      "economic_power": 25,
+      "mobilization_capacity": 60,
+      "organization_level": 55,
+      "current_opinion": 45,
+      "ideology_preferences": {
+        "economic": -10,
+        "liberties": 10,
+        "identity": 25,
+        "change": 20
+      },
+      "key_demands": ["reservations", "jobs", "social_mobility"],
+      "political_importance": "high"
+    },
+    "dalits_tribals": {
+      "name": {
+        "pt": "Dalits e Tribais",
+        "en": "Dalits and Tribals"
+      },
+      "population_share": 0.25,
+      "economic_power": 8,
+      "mobilization_capacity": 55,
+      "organization_level": 50,
+      "current_opinion": 20,
+      "ideology_preferences": {
+        "economic": -30,
+        "liberties": 40,
+        "identity": -15,
+        "change": 35
+      },
+      "key_demands": ["caste_abolition", "land_rights", "reservations"],
+      "discrimination_ongoing": true
+    },
+    "farmers": {
+      "name": {
+        "pt": "Agricultores",
+        "en": "Farmers"
+      },
+      "population_share": 0.45,
+      "economic_power": 20,
+      "mobilization_capacity": 75,
+      "organization_level": 60,
+      "current_opinion": 30,
+      "ideology_preferences": {
+        "economic": -20,
+        "liberties": 5,
+        "identity": 20,
+        "change": 10
+      },
+      "key_demands": ["msp_guarantee", "loan_waiver", "water", "subsidy"],
+      "protest_history": "2020-2021 laws"
+    },
+    "urban_middle_class": {
+      "name": {
+        "pt": "Classe Média Urbana",
+        "en": "Urban Middle Class"
+      },
+      "population_share": 0.20,
+      "economic_power": 45,
+      "mobilization_capacity": 40,
+      "organization_level": 45,
+      "current_opinion": 55,
+      "ideology_preferences": {
+        "economic": 25,
+        "liberties": 30,
+        "identity": 20,
+        "change": 25
+      },
+      "key_demands": ["development", "jobs", "infrastructure", "safety"],
+      "aspirational_voting": true
+    },
+    "business_elite": {
+      "name": {
+        "pt": "Elite Empresarial",
+        "en": "Business Elite"
+      },
+      "population_share": 0.01,
+      "economic_power": 60,
+      "mobilization_capacity": 25,
+      "organization_level": 80,
+      "current_opinion": 70,
+      "ideology_preferences": {
+        "economic": 60,
+        "liberties": 20,
+        "identity": 15,
+        "change": 20
+      },
+      "key_demands": ["ease_of_business", "infrastructure", "deregulation"],
+      "includes": ["tata", "ambani", "adani"]
+    },
+    "military": {
+      "name": {
+        "pt": "Forças Armadas",
+        "en": "Armed Forces"
+      },
+      "population_share": 0.015,
+      "economic_power": 10,
+      "mobilization_capacity": 90,
+      "organization_level": 95,
+      "current_opinion": 65,
+      "ideology_preferences": {
+        "economic": 10,
+        "liberties": -30,
+        "identity": 55,
+        "change": -15
+      },
+      "key_demands": ["budget", "modernization", "pakistan_deterrence", "china_defense"]
+    }
+  },
+
+  "ideology_position": {
+    "economic": 20,
+    "liberties": 15,
+    "identity": 45,
+    "change": 15,
+    "description": {
+      "economic": "Centro-direita: liberalização com welfare",
+      "liberties": "Democracia com crescente autoritarianismo",
+      "identity": "Nacionalismo hindu crescente (Hindutva)",
+      "change": "Modernização dentro de valores tradicionais"
+    }
+  },
+
+  "military": {
+    "active_personnel_thousands": 1455,
+    "reserve_personnel_thousands": 1155,
+    "military_budget_billions_usd": 83,
+    "military_budget_percent_gdp": 2.4,
+    "equipment_quality_index": 60,
+    "morale_index": 75,
+    "loyalty_index": 90,
+    "nuclear_warheads": 172,
+    "nuclear_capability": true,
+    "power_projection_regional": true,
+    "power_projection_global": false,
+    "border_disputes_active": ["china", "pakistan"]
+  },
+
+  "diplomacy": {
+    "un_security_council": false,
+    "seeking_permanent_seat": true,
+    "memberships": ["UN", "BRICS", "G20", "SCO", "Quad", "Commonwealth", "NAM"],
+    "multi_alignment_policy": true,
+    "soft_power_index": 55,
+    "relations": {
+      "usa": {
+        "opinion": 50,
+        "trade_dependency_percent": 12,
+        "ideological_alignment": 35,
+        "historical_tension": "low",
+        "key_issues": ["china_counter", "tech", "defense", "quad"]
+      },
+      "china": {
+        "opinion": -30,
+        "trade_dependency_percent": 15,
+        "ideological_alignment": -25,
+        "historical_tension": "medium",
+        "key_issues": ["border", "LAC", "trade_deficit", "influence"]
+      },
+      "russia": {
+        "opinion": 55,
+        "trade_dependency_percent": 8,
+        "ideological_alignment": 15,
+        "historical_tension": "none",
+        "key_issues": ["weapons", "oil_discount", "historical_ally"]
+      },
+      "pakistan": {
+        "opinion": -70,
+        "trade_dependency_percent": 0.5,
+        "ideological_alignment": -50,
+        "historical_tension": "extreme",
+        "key_issues": ["kashmir", "terrorism", "nuclear"]
+      },
+      "brazil": {
+        "opinion": 45,
+        "key_issues": ["brics", "south_south", "trade"]
+      },
+      "south_africa": {
+        "opinion": 50,
+        "key_issues": ["brics", "development", "historical"]
+      }
+    }
+  },
+
+  "geography": {
+    "area_km2": 3287263,
+    "coastline_km": 7517,
+    "borders": ["pakistan", "china", "nepal", "bhutan", "bangladesh", "myanmar"],
+    "disputed_territories": ["kashmir", "aksai_chin", "arunachal_pradesh"],
+    "strategic_resources": ["coal", "iron_ore", "bauxite", "rare_earths", "thorium"]
+  },
+
+  "demographics": {
+    "population_millions": 1420,
+    "largest_population": true,
+    "population_growth_percent": 0.9,
+    "median_age": 28,
+    "youth_bulge": true,
+    "urban_percent": 36,
+    "literacy_percent": 77,
+    "life_expectancy": 70,
+    "fertility_rate": 2.0,
+    "ethnic_composition": {
+      "indo_aryan": 72,
+      "dravidian": 25,
+      "other": 3
+    },
+    "religious_composition": {
+      "hindu": 80,
+      "muslim": 14,
+      "christian": 2.3,
+      "sikh": 1.7,
+      "other": 2
+    },
+    "languages_major": ["hindi", "english", "bengali", "telugu", "marathi", "tamil"],
+    "hdi": 0.644
+  },
+
+  "unique_challenges": [
+    {
+      "id": "hindu_muslim_tension",
+      "name": "Tensão Hindu-Muçulmana",
+      "description": "Polarização religiosa crescente ameaça coesão social",
+      "affected_metrics": ["stability", "polarization", "international_image"]
+    },
+    {
+      "id": "china_border",
+      "name": "Fronteira com China",
+      "description": "Tensões militares na LAC podem escalar",
+      "affected_metrics": ["military", "diplomacy", "economy"]
+    },
+    {
+      "id": "caste_system",
+      "name": "Sistema de Castas",
+      "description": "Desigualdade estrutural persistente",
+      "affected_metrics": ["gini", "social_mobility", "tension"]
+    },
+    {
+      "id": "climate_vulnerability",
+      "name": "Vulnerabilidade Climática",
+      "description": "Dependência de monções, calor extremo, poluição",
+      "affected_metrics": ["agriculture", "health", "economy"]
+    }
+  ],
+
+  "unique_opportunities": [
+    {
+      "id": "demographic_dividend",
+      "name": "Bônus Demográfico",
+      "description": "População jovem e crescente, maior força de trabalho mundial",
+      "potential_benefits": ["economy", "manufacturing", "tech"]
+    },
+    {
+      "id": "tech_hub",
+      "name": "Hub Tecnológico",
+      "description": "Segundo maior pool de desenvolvedores do mundo",
+      "potential_benefits": ["economy", "services", "innovation"]
+    },
+    {
+      "id": "china_plus_one",
+      "name": "China Plus One",
+      "description": "Empresas diversificando produção da China para Índia",
+      "potential_benefits": ["manufacturing", "fdi", "jobs"]
+    },
+    {
+      "id": "pharmacy_of_world",
+      "name": "Farmácia do Mundo",
+      "description": "Maior produtor de genéricos e vacinas",
+      "potential_benefits": ["economy", "soft_power", "diplomacy"]
+    }
+  ],
+
+  "special_mechanics": {
+    "caste_politics": true,
+    "coalition_required_sometimes": true,
+    "federal_states_power": true,
+    "monsoon_dependency": true,
+    "multi_party_system": true
+  },
+
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2025-01-01",
+    "data_sources": ["World Bank", "IMF", "RBI", "SIPRI", "Pew Research"]
+  }
+}

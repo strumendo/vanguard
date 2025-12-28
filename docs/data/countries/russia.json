@@ -1,0 +1,425 @@
+{
+  "country": {
+    "id": "russia",
+    "name": {
+      "pt": "Rússia",
+      "en": "Russia",
+      "es": "Rusia"
+    },
+    "flag_emoji": "🇷🇺",
+    "capital": "Moscow",
+    "region": "eurasia",
+    "difficulty": "hard",
+    "difficulty_reason": "Sanções severas, guerra ativa, dependência de energia, isolamento ocidental",
+    "start_year": 2025,
+    "government_type": "authoritarian_presidential",
+    "electoral_cycle_months": 72,
+    "next_election_month": 48,
+    "special_mechanic": "controlled_elections"
+  },
+
+  "economy": {
+    "gdp_billions_usd": 1860,
+    "gdp_per_capita_usd": 12800,
+    "gdp_growth_percent": 1.5,
+    "inflation_percent": 7.5,
+    "unemployment_percent": 3.0,
+    "debt_to_gdp_percent": 18,
+    "gini_coefficient": 0.36,
+    "reserves_billions_usd": 580,
+    "reserves_note": "Significant portion frozen by sanctions",
+    "frozen_reserves_billions_usd": 300,
+    "interest_rate_percent": 16.0,
+    "currency": {
+      "code": "RUB",
+      "name": "Russian Ruble",
+      "exchange_rate_usd": 92,
+      "capital_controls": true
+    },
+    "trade_balance_billions_usd": 120,
+    "main_exports": ["oil", "gas", "weapons", "wheat", "metals"],
+    "main_imports": ["machinery", "electronics", "vehicles", "pharmaceuticals"],
+    "sanctions_level": "severe",
+    "parallel_imports": true
+  },
+
+  "sectors": {
+    "oil_gas": {
+      "gdp_share_percent": 20.0,
+      "budget_revenue_share_percent": 45,
+      "employment_share_percent": 2.5,
+      "state_ownership_percent": 75,
+      "global_gas_share_percent": 17,
+      "global_oil_share_percent": 12,
+      "sanctions_impact": "moderate"
+    },
+    "military_industrial": {
+      "gdp_share_percent": 8.0,
+      "employment_share_percent": 5.0,
+      "state_ownership_percent": 90,
+      "war_economy_boost": true
+    },
+    "agriculture": {
+      "gdp_share_percent": 4.0,
+      "employment_share_percent": 6.0,
+      "wheat_exporter_rank": 1,
+      "fertilizer_exporter_rank": 1
+    },
+    "services": {
+      "gdp_share_percent": 55.0,
+      "employment_share_percent": 65.0
+    },
+    "technology": {
+      "gdp_share_percent": 3.0,
+      "brain_drain_active": true,
+      "import_substitution_ongoing": true
+    }
+  },
+
+  "politics": {
+    "approval_rating": 75,
+    "approval_rating_note": "Wartime rally effect, measurement unreliable",
+    "stability_index": 70,
+    "polarization_index": 25,
+    "legitimacy_index": 55,
+    "internal_tension": 40,
+    "corruption_perception_index": 28,
+    "press_freedom_index": 12,
+    "democracy_index": 2.28,
+    "ruling_party": "United Russia",
+    "years_in_power": 25,
+    "opposition_status": "suppressed"
+  },
+
+  "social_groups": {
+    "silvoiki": {
+      "name": {
+        "pt": "Siloviki (Forças de Segurança)",
+        "en": "Siloviki (Security Services)"
+      },
+      "population_share": 0.03,
+      "economic_power": 40,
+      "mobilization_capacity": 95,
+      "organization_level": 95,
+      "current_opinion": 85,
+      "ideology_preferences": {
+        "economic": -10,
+        "liberties": -80,
+        "identity": 80,
+        "change": -50
+      },
+      "key_demands": ["power", "budget", "impunity"],
+      "controls_coercion": true
+    },
+    "oligarchs": {
+      "name": {
+        "pt": "Oligarcas",
+        "en": "Oligarchs"
+      },
+      "population_share": 0.001,
+      "economic_power": 70,
+      "mobilization_capacity": 15,
+      "organization_level": 60,
+      "current_opinion": 50,
+      "ideology_preferences": {
+        "economic": 60,
+        "liberties": 10,
+        "identity": 20,
+        "change": -20
+      },
+      "key_demands": ["sanctions_relief", "asset_protection", "stability"],
+      "sanctions_affected": true
+    },
+    "urban_middle_class": {
+      "name": {
+        "pt": "Classe Média Urbana",
+        "en": "Urban Middle Class"
+      },
+      "population_share": 0.25,
+      "economic_power": 35,
+      "mobilization_capacity": 40,
+      "organization_level": 30,
+      "current_opinion": 35,
+      "ideology_preferences": {
+        "economic": 25,
+        "liberties": 40,
+        "identity": 15,
+        "change": 20
+      },
+      "key_demands": ["living_standards", "stability", "no_mobilization"],
+      "emigration_risk": "high"
+    },
+    "working_class": {
+      "name": {
+        "pt": "Classe Trabalhadora",
+        "en": "Working Class"
+      },
+      "population_share": 0.40,
+      "economic_power": 15,
+      "mobilization_capacity": 50,
+      "organization_level": 25,
+      "current_opinion": 65,
+      "ideology_preferences": {
+        "economic": -20,
+        "liberties": -15,
+        "identity": 45,
+        "change": -30
+      },
+      "key_demands": ["wages", "jobs", "soviet_nostalgia"],
+      "patriotism_level": "high"
+    },
+    "rural_population": {
+      "name": {
+        "pt": "População Rural",
+        "en": "Rural Population"
+      },
+      "population_share": 0.25,
+      "economic_power": 10,
+      "mobilization_capacity": 30,
+      "organization_level": 20,
+      "current_opinion": 70,
+      "ideology_preferences": {
+        "economic": -15,
+        "liberties": -25,
+        "identity": 55,
+        "change": -45
+      },
+      "key_demands": ["subsidies", "infrastructure", "tradition"],
+      "military_recruitment_source": true
+    },
+    "military": {
+      "name": {
+        "pt": "Forças Armadas",
+        "en": "Armed Forces"
+      },
+      "population_share": 0.02,
+      "economic_power": 20,
+      "mobilization_capacity": 95,
+      "organization_level": 85,
+      "current_opinion": 75,
+      "ideology_preferences": {
+        "economic": -5,
+        "liberties": -50,
+        "identity": 75,
+        "change": -20
+      },
+      "key_demands": ["budget", "equipment", "victory"],
+      "war_fatigue_risk": true
+    },
+    "liberal_opposition": {
+      "name": {
+        "pt": "Oposição Liberal",
+        "en": "Liberal Opposition"
+      },
+      "population_share": 0.08,
+      "economic_power": 15,
+      "mobilization_capacity": 25,
+      "organization_level": 35,
+      "current_opinion": -80,
+      "ideology_preferences": {
+        "economic": 40,
+        "liberties": 80,
+        "identity": -40,
+        "change": 70
+      },
+      "key_demands": ["democracy", "anti_war", "western_integration"],
+      "suppression_level": "high",
+      "exile_percentage": 60
+    },
+    "nationalists": {
+      "name": {
+        "pt": "Nacionalistas / Linha Dura",
+        "en": "Nationalists / Hardliners"
+      },
+      "population_share": 0.10,
+      "economic_power": 10,
+      "mobilization_capacity": 70,
+      "organization_level": 60,
+      "current_opinion": 60,
+      "ideology_preferences": {
+        "economic": -25,
+        "liberties": -70,
+        "identity": 90,
+        "change": 30
+      },
+      "key_demands": ["total_war", "expansion", "russian_world"],
+      "wants_escalation": true
+    }
+  },
+
+  "ideology_position": {
+    "economic": 15,
+    "liberties": -60,
+    "identity": 75,
+    "change": -25,
+    "description": {
+      "economic": "Capitalismo de estado com oligarquias",
+      "liberties": "Autoritário com fachada democrática",
+      "identity": "Nacionalismo russo agressivo, anti-Ocidente",
+      "change": "Conservador, restauração do status de potência"
+    }
+  },
+
+  "military": {
+    "active_personnel_thousands": 1150,
+    "reserve_personnel_thousands": 2000,
+    "military_budget_billions_usd": 110,
+    "military_budget_percent_gdp": 6.0,
+    "equipment_quality_index": 60,
+    "morale_index": 55,
+    "loyalty_index": 75,
+    "nuclear_warheads": 5889,
+    "nuclear_capability": true,
+    "power_projection_regional": true,
+    "power_projection_global": "nuclear_only",
+    "active_conflicts": ["ukraine"],
+    "wagner_group_status": "absorbed"
+  },
+
+  "diplomacy": {
+    "un_security_council": true,
+    "un_security_council_veto": true,
+    "memberships": ["UN", "BRICS", "SCO", "CSTO", "G20", "EAEU"],
+    "pariah_status_west": true,
+    "soft_power_index": 25,
+    "relations": {
+      "usa": {
+        "opinion": -75,
+        "trade_dependency_percent": 1,
+        "ideological_alignment": -70,
+        "historical_tension": "extreme",
+        "key_issues": ["ukraine", "nuclear", "nato"]
+      },
+      "china": {
+        "opinion": 65,
+        "trade_dependency_percent": 22,
+        "ideological_alignment": 40,
+        "historical_tension": "resolved",
+        "key_issues": ["strategic_partnership", "energy", "no_limits"]
+      },
+      "european_union": {
+        "opinion": -65,
+        "trade_dependency_percent": 8,
+        "ideological_alignment": -60,
+        "key_issues": ["sanctions", "energy", "ukraine"]
+      },
+      "india": {
+        "opinion": 50,
+        "trade_dependency_percent": 8,
+        "key_issues": ["oil_discount", "weapons", "historical_ally"]
+      },
+      "brazil": {
+        "opinion": 35,
+        "key_issues": ["brics", "fertilizers", "multipolar"]
+      },
+      "south_africa": {
+        "opinion": 40,
+        "key_issues": ["brics", "non_alignment"]
+      },
+      "iran": {
+        "opinion": 60,
+        "key_issues": ["weapons", "sanctions_evasion", "anti_west"]
+      },
+      "north_korea": {
+        "opinion": 55,
+        "key_issues": ["weapons", "ammunition", "sanctions_evasion"]
+      }
+    }
+  },
+
+  "geography": {
+    "area_km2": 17098242,
+    "largest_country": true,
+    "coastline_km": 37653,
+    "borders": ["norway", "finland", "estonia", "latvia", "lithuania", "poland", "belarus", "ukraine", "georgia", "azerbaijan", "kazakhstan", "mongolia", "china", "north_korea"],
+    "strategic_resources": ["oil", "gas", "timber", "nickel", "diamonds", "uranium"]
+  },
+
+  "demographics": {
+    "population_millions": 144,
+    "population_growth_percent": -0.4,
+    "median_age": 40,
+    "urban_percent": 75,
+    "literacy_percent": 99.7,
+    "life_expectancy": 73,
+    "fertility_rate": 1.5,
+    "brain_drain_active": true,
+    "war_casualties_ongoing": true,
+    "hdi": 0.822
+  },
+
+  "active_conflicts": {
+    "ukraine": {
+      "status": "active",
+      "start_year": 2022,
+      "military_committed_percent": 35,
+      "monthly_cost_billions_usd": 8,
+      "casualties_thousands": "classified",
+      "international_isolation_caused": true,
+      "sanctions_triggered": true
+    }
+  },
+
+  "unique_challenges": [
+    {
+      "id": "ukraine_war",
+      "name": "Guerra na Ucrânia",
+      "description": "Conflito prolongado drena recursos e isola país",
+      "affected_metrics": ["economy", "military", "diplomacy", "demographics"]
+    },
+    {
+      "id": "western_sanctions",
+      "name": "Sanções Ocidentais",
+      "description": "Mais severas sanções da história moderna",
+      "affected_metrics": ["economy", "technology", "finance", "trade"]
+    },
+    {
+      "id": "succession_question",
+      "name": "Questão da Sucessão",
+      "description": "Líder longevo sem sucessor claro",
+      "affected_metrics": ["stability", "elite_politics"]
+    },
+    {
+      "id": "demographic_collapse",
+      "name": "Colapso Demográfico",
+      "description": "População em queda, emigração e baixas de guerra",
+      "affected_metrics": ["economy", "military", "long_term"]
+    }
+  ],
+
+  "unique_opportunities": [
+    {
+      "id": "energy_leverage",
+      "name": "Alavanca Energética",
+      "description": "Maior exportador de gás, grande exportador de petróleo",
+      "potential_benefits": ["diplomacy", "economy", "geopolitics"]
+    },
+    {
+      "id": "china_partnership",
+      "name": "Parceria com China",
+      "description": "Aliança estratégica com segunda economia mundial",
+      "potential_benefits": ["sanctions_evasion", "trade", "military"]
+    },
+    {
+      "id": "global_south_appeal",
+      "name": "Apelo ao Sul Global",
+      "description": "Posicionamento anti-hegemônico ressoa em muitos países",
+      "potential_benefits": ["diplomacy", "trade", "legitimacy"]
+    }
+  ],
+
+  "special_mechanics": {
+    "war_economy": true,
+    "sanctions_management": true,
+    "controlled_elections": true,
+    "suppressed_opposition": true,
+    "nuclear_escalation_option": true,
+    "energy_as_weapon": true
+  },
+
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2025-01-01",
+    "data_sources": ["World Bank", "IMF", "SIPRI", "Levada Center", "ISW"]
+  }
+}

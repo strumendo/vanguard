@@ -1,0 +1,420 @@
+{
+  "country": {
+    "id": "china",
+    "name": {
+      "pt": "China",
+      "en": "China",
+      "es": "China"
+    },
+    "flag_emoji": "🇨🇳",
+    "capital": "Beijing",
+    "region": "east_asia",
+    "difficulty": "medium",
+    "difficulty_reason": "Economia poderosa e controle interno, mas tensões com EUA, crise imobiliária e desafios demográficos",
+    "start_year": 2025,
+    "government_type": "single_party_state",
+    "electoral_cycle_months": 60,
+    "next_party_congress_month": 36,
+    "special_mechanic": "no_free_elections"
+  },
+
+  "economy": {
+    "gdp_billions_usd": 18500,
+    "gdp_per_capita_usd": 13000,
+    "gdp_growth_percent": 4.8,
+    "inflation_percent": 1.5,
+    "unemployment_percent": 5.2,
+    "youth_unemployment_percent": 15.0,
+    "debt_to_gdp_percent": 83,
+    "corporate_debt_to_gdp_percent": 160,
+    "gini_coefficient": 0.38,
+    "reserves_billions_usd": 3250,
+    "interest_rate_percent": 3.45,
+    "currency": {
+      "code": "CNY",
+      "name": "Yuan Renminbi",
+      "exchange_rate_usd": 7.2,
+      "capital_controls": true
+    },
+    "trade_balance_billions_usd": 820,
+    "main_exports": ["electronics", "machinery", "textiles", "steel", "rare_earths"],
+    "main_imports": ["oil", "semiconductors", "food", "iron_ore"],
+    "economic_freedom_index": 48.3
+  },
+
+  "sectors": {
+    "manufacturing": {
+      "gdp_share_percent": 27.0,
+      "employment_share_percent": 28.0,
+      "state_ownership_percent": 25,
+      "private_national_percent": 55,
+      "foreign_ownership_percent": 20,
+      "productivity_index": 75,
+      "global_share_percent": 30
+    },
+    "services": {
+      "gdp_share_percent": 54.0,
+      "employment_share_percent": 48.0,
+      "state_ownership_percent": 30,
+      "private_national_percent": 60,
+      "foreign_ownership_percent": 10
+    },
+    "agriculture": {
+      "gdp_share_percent": 7.0,
+      "employment_share_percent": 24.0,
+      "state_ownership_percent": 5,
+      "food_self_sufficiency_percent": 95
+    },
+    "technology": {
+      "gdp_share_percent": 8.0,
+      "state_ownership_percent": 20,
+      "tech_giants": ["huawei", "alibaba", "tencent", "bytedance"],
+      "semiconductor_dependency": "high"
+    },
+    "real_estate": {
+      "gdp_share_percent": 25.0,
+      "crisis_level": "high",
+      "evergrande_exposure": true
+    }
+  },
+
+  "politics": {
+    "approval_rating": 78,
+    "approval_rating_note": "Difficult to measure accurately",
+    "stability_index": 82,
+    "polarization_index": 15,
+    "polarization_note": "Suppressed, not absent",
+    "legitimacy_index": 72,
+    "internal_tension": 35,
+    "corruption_perception_index": 45,
+    "press_freedom_index": 15,
+    "democracy_index": 2.12,
+    "ruling_party": "CPC",
+    "paramount_leader": true,
+    "factional_balance": {
+      "reformists": 30,
+      "hardliners": 45,
+      "technocrats": 25
+    }
+  },
+
+  "social_groups": {
+    "urban_middle_class": {
+      "name": {
+        "pt": "Classe Média Urbana",
+        "en": "Urban Middle Class"
+      },
+      "population_share": 0.35,
+      "economic_power": 45,
+      "mobilization_capacity": 25,
+      "organization_level": 20,
+      "current_opinion": 60,
+      "ideology_preferences": {
+        "economic": 20,
+        "liberties": 15,
+        "identity": 30,
+        "change": 10
+      },
+      "key_demands": ["prosperity", "stability", "housing", "education"],
+      "protest_threshold": -50
+    },
+    "migrant_workers": {
+      "name": {
+        "pt": "Trabalhadores Migrantes",
+        "en": "Migrant Workers"
+      },
+      "population_share": 0.22,
+      "economic_power": 8,
+      "mobilization_capacity": 50,
+      "organization_level": 15,
+      "current_opinion": 40,
+      "ideology_preferences": {
+        "economic": -25,
+        "liberties": 5,
+        "identity": 10,
+        "change": 20
+      },
+      "key_demands": ["hukou_reform", "wages", "social_services"],
+      "hukou_system_affected": true
+    },
+    "rural_farmers": {
+      "name": {
+        "pt": "Agricultores Rurais",
+        "en": "Rural Farmers"
+      },
+      "population_share": 0.28,
+      "economic_power": 10,
+      "mobilization_capacity": 40,
+      "organization_level": 25,
+      "current_opinion": 55,
+      "ideology_preferences": {
+        "economic": -15,
+        "liberties": -10,
+        "identity": 25,
+        "change": -5
+      },
+      "key_demands": ["land_rights", "prices", "infrastructure"]
+    },
+    "party_cadres": {
+      "name": {
+        "pt": "Quadros do Partido",
+        "en": "Party Cadres"
+      },
+      "population_share": 0.07,
+      "economic_power": 60,
+      "mobilization_capacity": 90,
+      "organization_level": 98,
+      "current_opinion": 85,
+      "ideology_preferences": {
+        "economic": -20,
+        "liberties": -70,
+        "identity": 50,
+        "change": -40
+      },
+      "key_demands": ["party_loyalty", "stability", "anti_corruption_protection"],
+      "controls_state": true
+    },
+    "entrepreneurs": {
+      "name": {
+        "pt": "Empresários Privados",
+        "en": "Private Entrepreneurs"
+      },
+      "population_share": 0.03,
+      "economic_power": 55,
+      "mobilization_capacity": 20,
+      "organization_level": 40,
+      "current_opinion": 45,
+      "ideology_preferences": {
+        "economic": 50,
+        "liberties": 25,
+        "identity": 15,
+        "change": 20
+      },
+      "key_demands": ["market_access", "less_regulation", "property_rights"],
+      "tech_crackdown_affected": true
+    },
+    "students_youth": {
+      "name": {
+        "pt": "Estudantes e Jovens",
+        "en": "Students and Youth"
+      },
+      "population_share": 0.12,
+      "economic_power": 5,
+      "mobilization_capacity": 60,
+      "organization_level": 30,
+      "current_opinion": 50,
+      "ideology_preferences": {
+        "economic": 5,
+        "liberties": 30,
+        "identity": 20,
+        "change": 25
+      },
+      "key_demands": ["jobs", "housing", "less_pressure"],
+      "lying_flat_movement": true
+    },
+    "ethnic_minorities": {
+      "name": {
+        "pt": "Minorias Étnicas",
+        "en": "Ethnic Minorities"
+      },
+      "population_share": 0.08,
+      "economic_power": 5,
+      "mobilization_capacity": 45,
+      "organization_level": 35,
+      "current_opinion": -20,
+      "ideology_preferences": {
+        "economic": -10,
+        "liberties": 60,
+        "identity": -70,
+        "change": 40
+      },
+      "key_demands": ["cultural_rights", "autonomy", "end_repression"],
+      "includes": ["uyghurs", "tibetans", "mongols"],
+      "international_attention": "high"
+    },
+    "military_pla": {
+      "name": {
+        "pt": "Exército de Libertação Popular",
+        "en": "People's Liberation Army"
+      },
+      "population_share": 0.015,
+      "economic_power": 15,
+      "mobilization_capacity": 95,
+      "organization_level": 98,
+      "current_opinion": 80,
+      "ideology_preferences": {
+        "economic": -30,
+        "liberties": -60,
+        "identity": 70,
+        "change": -30
+      },
+      "key_demands": ["military_budget", "taiwan", "national_glory"],
+      "loyalty_to_party": 90
+    }
+  },
+
+  "ideology_position": {
+    "economic": -25,
+    "liberties": -65,
+    "identity": 55,
+    "change": 15,
+    "description": {
+      "economic": "Socialismo de mercado: controle estatal + dinâmica capitalista",
+      "liberties": "Autoritário: partido único, censura, vigilância",
+      "identity": "Nacionalismo chinês forte, rejuvenescimento nacional",
+      "change": "Modernização contínua sob controle do partido"
+    }
+  },
+
+  "military": {
+    "active_personnel_thousands": 2035,
+    "reserve_personnel_thousands": 510,
+    "military_budget_billions_usd": 225,
+    "military_budget_percent_gdp": 1.7,
+    "equipment_quality_index": 75,
+    "morale_index": 80,
+    "loyalty_index": 90,
+    "aircraft_carriers": 3,
+    "nuclear_warheads": 500,
+    "nuclear_capability": true,
+    "power_projection_regional": true,
+    "power_projection_global": "emerging",
+    "hypersonic_missiles": true
+  },
+
+  "diplomacy": {
+    "un_security_council": true,
+    "un_security_council_veto": true,
+    "memberships": ["UN", "BRICS", "SCO", "G20", "WTO", "AIIB_founder"],
+    "belt_and_road_participants": 150,
+    "soft_power_index": 60,
+    "relations": {
+      "usa": {
+        "opinion": -45,
+        "trade_dependency_percent": 15,
+        "ideological_alignment": -65,
+        "historical_tension": "high",
+        "key_issues": ["taiwan", "trade", "tech", "south_china_sea"]
+      },
+      "russia": {
+        "opinion": 60,
+        "trade_dependency_percent": 4,
+        "ideological_alignment": 35,
+        "historical_tension": "resolved",
+        "key_issues": ["strategic_partnership", "energy", "military"]
+      },
+      "european_union": {
+        "opinion": 15,
+        "trade_dependency_percent": 14,
+        "ideological_alignment": -40,
+        "key_issues": ["trade", "human_rights", "investment"]
+      },
+      "india": {
+        "opinion": -25,
+        "trade_dependency_percent": 2,
+        "ideological_alignment": -20,
+        "historical_tension": "medium",
+        "key_issues": ["border", "pakistan", "influence"]
+      },
+      "brazil": {
+        "opinion": 50,
+        "trade_dependency_percent": 3,
+        "key_issues": ["commodities", "brics", "investment"]
+      },
+      "south_africa": {
+        "opinion": 45,
+        "key_issues": ["brics", "africa", "resources"]
+      },
+      "taiwan": {
+        "opinion": -90,
+        "special_status": "renegade_province",
+        "military_threat": true
+      }
+    }
+  },
+
+  "geography": {
+    "area_km2": 9596961,
+    "coastline_km": 14500,
+    "borders": ["russia", "mongolia", "north_korea", "vietnam", "laos", "myanmar", "india", "bhutan", "nepal", "pakistan", "afghanistan", "tajikistan", "kyrgyzstan", "kazakhstan"],
+    "disputed_territories": ["taiwan", "south_china_sea", "aksai_chin", "arunachal_pradesh"],
+    "strategic_resources": ["rare_earths_monopoly", "coal", "manufacturing_base"]
+  },
+
+  "demographics": {
+    "population_millions": 1410,
+    "population_growth_percent": -0.1,
+    "median_age": 39,
+    "urban_percent": 65,
+    "literacy_percent": 97,
+    "life_expectancy": 78,
+    "fertility_rate": 1.1,
+    "demographic_crisis": true,
+    "aging_population": true,
+    "hdi": 0.768
+  },
+
+  "unique_challenges": [
+    {
+      "id": "taiwan_question",
+      "name": "Questão de Taiwan",
+      "description": "Tensão sobre reunificação pode escalar para guerra com EUA",
+      "affected_metrics": ["diplomacy", "military", "economy"]
+    },
+    {
+      "id": "real_estate_crisis",
+      "name": "Crise Imobiliária",
+      "description": "Colapso do setor pode arrastar economia",
+      "affected_metrics": ["gdp", "banking", "social_stability"]
+    },
+    {
+      "id": "demographic_decline",
+      "name": "Declínio Demográfico",
+      "description": "População envelhecendo rapidamente, força de trabalho diminuindo",
+      "affected_metrics": ["growth", "pensions", "military"]
+    },
+    {
+      "id": "tech_decoupling",
+      "name": "Desacoplamento Tecnológico",
+      "description": "Sanções de semicondutores ameaçam avanço tecnológico",
+      "affected_metrics": ["tech", "military", "economy"]
+    }
+  ],
+
+  "unique_opportunities": [
+    {
+      "id": "manufacturing_dominance",
+      "name": "Domínio Manufatureiro",
+      "description": "Maior base industrial do mundo",
+      "potential_benefits": ["economy", "trade", "self_sufficiency"]
+    },
+    {
+      "id": "green_energy_leader",
+      "name": "Líder em Energia Verde",
+      "description": "Maior produtor de painéis solares e baterias",
+      "potential_benefits": ["environment", "exports", "tech"]
+    },
+    {
+      "id": "belt_and_road",
+      "name": "Nova Rota da Seda",
+      "description": "Maior projeto de infraestrutura da história",
+      "potential_benefits": ["diplomacy", "trade", "influence"]
+    }
+  ],
+
+  "special_mechanics": {
+    "social_credit_system": true,
+    "great_firewall": true,
+    "hukou_system": true,
+    "party_control_required": true,
+    "legitimacy_source": "performance",
+    "no_elections": true,
+    "internal_factions": true
+  },
+
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2025-01-01",
+    "data_sources": ["World Bank", "IMF", "NBS China", "SIPRI", "Freedom House"]
+  }
+}

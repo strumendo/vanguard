@@ -1,0 +1,727 @@
+{
+  "country": {
+    "id": "brazil",
+    "name": {
+      "pt": "Brasil",
+      "en": "Brazil",
+      "es": "Brasil"
+    },
+    "flag_emoji": "🇧🇷",
+    "capital": "Brasília",
+    "region": "south_america",
+    "difficulty": "medium",
+    "difficulty_reason": "Economia diversificada, mas polarização extrema e desigualdade alta",
+    "start_year": 2025,
+    "government_type": "presidential_democracy",
+    "electoral_cycle_months": 48,
+    "next_election_month": 46
+  },
+
+  "economy": {
+    "gdp_billions_usd": 2170,
+    "gdp_per_capita_usd": 10200,
+    "gdp_growth_percent": 2.8,
+    "inflation_percent": 4.6,
+    "unemployment_percent": 7.8,
+    "debt_to_gdp_percent": 78.5,
+    "gini_coefficient": 0.518,
+    "reserves_billions_usd": 355,
+    "interest_rate_percent": 12.25,
+    "currency": {
+      "code": "BRL",
+      "name": "Real",
+      "exchange_rate_usd": 5.0
+    },
+    "trade_balance_billions_usd": 80,
+    "main_exports": ["soy", "iron_ore", "oil", "beef", "coffee", "sugar"],
+    "main_imports": ["electronics", "machinery", "chemicals", "pharmaceuticals"],
+    "economic_freedom_index": 53.4
+  },
+
+  "sectors": {
+    "agriculture": {
+      "gdp_share_percent": 7.5,
+      "employment_share_percent": 9.0,
+      "state_ownership_percent": 2,
+      "private_national_percent": 85,
+      "foreign_ownership_percent": 13,
+      "productivity_index": 85,
+      "export_dependency_percent": 45,
+      "sanctions_vulnerability": "low",
+      "subsectors": ["soy", "cattle", "coffee", "sugar", "orange", "corn"]
+    },
+    "industry": {
+      "gdp_share_percent": 20.5,
+      "employment_share_percent": 19.0,
+      "state_ownership_percent": 12,
+      "private_national_percent": 58,
+      "foreign_ownership_percent": 30,
+      "productivity_index": 55,
+      "export_dependency_percent": 25,
+      "sanctions_vulnerability": "medium",
+      "subsectors": ["automotive", "aerospace", "steel", "textiles", "food_processing"]
+    },
+    "services": {
+      "gdp_share_percent": 63.0,
+      "employment_share_percent": 62.0,
+      "state_ownership_percent": 8,
+      "private_national_percent": 78,
+      "foreign_ownership_percent": 14,
+      "productivity_index": 60,
+      "export_dependency_percent": 5,
+      "sanctions_vulnerability": "low",
+      "subsectors": ["retail", "finance", "tech", "tourism", "healthcare"]
+    },
+    "energy": {
+      "gdp_share_percent": 6.0,
+      "employment_share_percent": 1.5,
+      "state_ownership_percent": 55,
+      "private_national_percent": 25,
+      "foreign_ownership_percent": 20,
+      "productivity_index": 70,
+      "export_dependency_percent": 15,
+      "sanctions_vulnerability": "medium",
+      "subsectors": ["oil", "hydroelectric", "ethanol", "wind", "solar"],
+      "energy_matrix": {
+        "renewable_percent": 48,
+        "oil_percent": 34,
+        "gas_percent": 12,
+        "coal_percent": 5,
+        "nuclear_percent": 1
+      }
+    },
+    "mining": {
+      "gdp_share_percent": 3.0,
+      "employment_share_percent": 0.5,
+      "state_ownership_percent": 5,
+      "private_national_percent": 70,
+      "foreign_ownership_percent": 25,
+      "productivity_index": 75,
+      "export_dependency_percent": 80,
+      "sanctions_vulnerability": "low",
+      "subsectors": ["iron_ore", "bauxite", "gold", "niobium", "manganese"]
+    }
+  },
+
+  "politics": {
+    "approval_rating": 38,
+    "stability_index": 52,
+    "polarization_index": 78,
+    "legitimacy_index": 62,
+    "internal_tension": 45,
+    "corruption_perception_index": 38,
+    "press_freedom_index": 52,
+    "democracy_index": 6.8,
+    "incumbent_party": "center_right",
+    "years_in_power": 2,
+    "constitutional_amendments_possible": true,
+    "term_limit_years": 8,
+    "impeachment_threshold": 342
+  },
+
+  "social_groups": {
+    "urban_workers": {
+      "name": {
+        "pt": "Trabalhadores Urbanos",
+        "en": "Urban Workers"
+      },
+      "population_share": 0.32,
+      "economic_power": 18,
+      "mobilization_capacity": 72,
+      "organization_level": 65,
+      "current_opinion": 5,
+      "ideology_preferences": {
+        "economic": -35,
+        "liberties": 25,
+        "identity": -5,
+        "change": 35
+      },
+      "key_demands": [
+        "minimum_wage_increase",
+        "labor_rights",
+        "public_healthcare",
+        "affordable_housing"
+      ],
+      "natural_allies": ["students", "public_servants"],
+      "natural_rivals": ["business_elite", "rural_landowners"],
+      "historical_alignment": "left",
+      "strike_propensity": 70,
+      "voting_turnout": 85
+    },
+    "middle_class": {
+      "name": {
+        "pt": "Classe Média",
+        "en": "Middle Class"
+      },
+      "population_share": 0.28,
+      "economic_power": 38,
+      "mobilization_capacity": 55,
+      "organization_level": 45,
+      "current_opinion": -5,
+      "ideology_preferences": {
+        "economic": 15,
+        "liberties": 45,
+        "identity": 5,
+        "change": 10
+      },
+      "key_demands": [
+        "low_inflation",
+        "security",
+        "quality_education",
+        "anti_corruption"
+      ],
+      "natural_allies": ["media_intellectuals"],
+      "natural_rivals": [],
+      "historical_alignment": "swing",
+      "strike_propensity": 25,
+      "voting_turnout": 90
+    },
+    "business_elite": {
+      "name": {
+        "pt": "Elite Empresarial",
+        "en": "Business Elite"
+      },
+      "population_share": 0.02,
+      "economic_power": 82,
+      "mobilization_capacity": 35,
+      "organization_level": 90,
+      "current_opinion": 25,
+      "ideology_preferences": {
+        "economic": 75,
+        "liberties": -15,
+        "identity": 20,
+        "change": -35
+      },
+      "key_demands": [
+        "low_taxes",
+        "deregulation",
+        "labor_flexibility",
+        "privatization"
+      ],
+      "natural_allies": ["military", "rural_landowners"],
+      "natural_rivals": ["urban_workers", "students"],
+      "historical_alignment": "right",
+      "strike_propensity": 0,
+      "voting_turnout": 95,
+      "capital_flight_threshold": -40
+    },
+    "military": {
+      "name": {
+        "pt": "Forças Armadas",
+        "en": "Military"
+      },
+      "population_share": 0.015,
+      "economic_power": 12,
+      "mobilization_capacity": 95,
+      "organization_level": 98,
+      "current_opinion": 35,
+      "ideology_preferences": {
+        "economic": 25,
+        "liberties": -55,
+        "identity": 65,
+        "change": -40
+      },
+      "key_demands": [
+        "military_budget",
+        "institutional_respect",
+        "order",
+        "nationalism"
+      ],
+      "natural_allies": ["business_elite", "religious_conservatives"],
+      "natural_rivals": ["students"],
+      "historical_alignment": "right",
+      "coup_threshold": -50,
+      "loyalty_to_constitution": 60
+    },
+    "rural_landowners": {
+      "name": {
+        "pt": "Ruralistas / Agronegócio",
+        "en": "Rural Landowners / Agribusiness"
+      },
+      "population_share": 0.05,
+      "economic_power": 45,
+      "mobilization_capacity": 50,
+      "organization_level": 85,
+      "current_opinion": 40,
+      "ideology_preferences": {
+        "economic": 60,
+        "liberties": -25,
+        "identity": 50,
+        "change": -45
+      },
+      "key_demands": [
+        "land_rights",
+        "deforestation_flexibility",
+        "export_support",
+        "rural_credit"
+      ],
+      "natural_allies": ["business_elite", "military"],
+      "natural_rivals": ["environmentalists", "indigenous"],
+      "historical_alignment": "right",
+      "congressional_power": 35
+    },
+    "rural_workers": {
+      "name": {
+        "pt": "Trabalhadores Rurais / Sem-Terra",
+        "en": "Rural Workers / Landless"
+      },
+      "population_share": 0.08,
+      "economic_power": 5,
+      "mobilization_capacity": 70,
+      "organization_level": 75,
+      "current_opinion": -15,
+      "ideology_preferences": {
+        "economic": -55,
+        "liberties": 15,
+        "identity": -10,
+        "change": 55
+      },
+      "key_demands": [
+        "land_reform",
+        "rural_credit",
+        "family_farming_support"
+      ],
+      "natural_allies": ["urban_workers", "students"],
+      "natural_rivals": ["rural_landowners"],
+      "historical_alignment": "left",
+      "occupation_propensity": 65
+    },
+    "students": {
+      "name": {
+        "pt": "Estudantes / Jovens",
+        "en": "Students / Youth"
+      },
+      "population_share": 0.14,
+      "economic_power": 5,
+      "mobilization_capacity": 85,
+      "organization_level": 60,
+      "current_opinion": -20,
+      "ideology_preferences": {
+        "economic": -40,
+        "liberties": 65,
+        "identity": -25,
+        "change": 75
+      },
+      "key_demands": [
+        "public_education",
+        "university_funding",
+        "employment",
+        "climate_action"
+      ],
+      "natural_allies": ["urban_workers", "media_intellectuals"],
+      "natural_rivals": ["military", "religious_conservatives"],
+      "historical_alignment": "left",
+      "protest_propensity": 80,
+      "voting_turnout": 70
+    },
+    "religious_conservatives": {
+      "name": {
+        "pt": "Evangélicos / Religiosos Conservadores",
+        "en": "Evangelical / Religious Conservatives"
+      },
+      "population_share": 0.30,
+      "economic_power": 22,
+      "mobilization_capacity": 65,
+      "organization_level": 80,
+      "current_opinion": 45,
+      "ideology_preferences": {
+        "economic": 20,
+        "liberties": -45,
+        "identity": 40,
+        "change": -60
+      },
+      "key_demands": [
+        "traditional_family",
+        "religious_freedom",
+        "anti_abortion",
+        "anti_drug_legalization"
+      ],
+      "natural_allies": ["military", "rural_landowners"],
+      "natural_rivals": ["students", "lgbtq"],
+      "historical_alignment": "right",
+      "congressional_power": 25,
+      "media_influence": 40
+    },
+    "media_intellectuals": {
+      "name": {
+        "pt": "Mídia / Intelectuais",
+        "en": "Media / Intellectuals"
+      },
+      "population_share": 0.03,
+      "economic_power": 35,
+      "mobilization_capacity": 40,
+      "organization_level": 55,
+      "current_opinion": -15,
+      "ideology_preferences": {
+        "economic": 5,
+        "liberties": 70,
+        "identity": -15,
+        "change": 40
+      },
+      "key_demands": [
+        "press_freedom",
+        "cultural_funding",
+        "education_investment",
+        "anti_censorship"
+      ],
+      "natural_allies": ["students", "middle_class"],
+      "natural_rivals": ["military", "religious_conservatives"],
+      "historical_alignment": "center_left",
+      "narrative_influence": 70
+    },
+    "public_servants": {
+      "name": {
+        "pt": "Servidores Públicos",
+        "en": "Public Servants"
+      },
+      "population_share": 0.06,
+      "economic_power": 25,
+      "mobilization_capacity": 60,
+      "organization_level": 80,
+      "current_opinion": 0,
+      "ideology_preferences": {
+        "economic": -25,
+        "liberties": 30,
+        "identity": 0,
+        "change": 5
+      },
+      "key_demands": [
+        "job_stability",
+        "salary_adjustment",
+        "pension_rights",
+        "public_services_funding"
+      ],
+      "natural_allies": ["urban_workers"],
+      "natural_rivals": ["business_elite"],
+      "historical_alignment": "center_left",
+      "strike_propensity": 55
+    },
+    "indigenous_quilombolas": {
+      "name": {
+        "pt": "Indígenas e Quilombolas",
+        "en": "Indigenous and Quilombolas"
+      },
+      "population_share": 0.015,
+      "economic_power": 2,
+      "mobilization_capacity": 55,
+      "organization_level": 70,
+      "current_opinion": -30,
+      "ideology_preferences": {
+        "economic": -45,
+        "liberties": 40,
+        "identity": -50,
+        "change": 30
+      },
+      "key_demands": [
+        "land_demarcation",
+        "environmental_protection",
+        "cultural_rights",
+        "anti_mining_invasion"
+      ],
+      "natural_allies": ["environmentalists", "students"],
+      "natural_rivals": ["rural_landowners", "mining_interests"],
+      "historical_alignment": "left",
+      "international_visibility": 75
+    }
+  },
+
+  "ideology_position": {
+    "economic": 20,
+    "liberties": 15,
+    "identity": 20,
+    "change": -10,
+    "description": {
+      "economic": "Centro-direita: economia de mercado com intervenção moderada",
+      "liberties": "Democrático com tensões institucionais",
+      "identity": "Nacionalismo moderado com abertura ao exterior",
+      "change": "Levemente conservador, resistência a reformas radicais"
+    }
+  },
+
+  "military": {
+    "active_personnel_thousands": 360,
+    "reserve_personnel_thousands": 1340,
+    "military_budget_percent_gdp": 1.3,
+    "equipment_quality_index": 55,
+    "morale_index": 72,
+    "loyalty_index": 68,
+    "branches": {
+      "army": {
+        "personnel_thousands": 215,
+        "equipment_quality": 50
+      },
+      "navy": {
+        "personnel_thousands": 80,
+        "equipment_quality": 55
+      },
+      "air_force": {
+        "personnel_thousands": 65,
+        "equipment_quality": 60
+      }
+    },
+    "nuclear_capability": false,
+    "power_projection_regional": true,
+    "power_projection_global": false,
+    "un_peacekeeping_missions": 5
+  },
+
+  "diplomacy": {
+    "un_security_council": false,
+    "un_general_assembly_influence": 65,
+    "memberships": [
+      "UN", "BRICS", "G20", "MERCOSUR", "OAS", "CPLP", "WTO", "UNASUR"
+    ],
+    "seeking_membership": ["UN_Security_Council_permanent"],
+    "treaties_active": 245,
+    "embassies_abroad": 139,
+    "foreign_embassies": 128,
+    "soft_power_index": 58,
+    "relations": {
+      "usa": {
+        "opinion": 30,
+        "trade_dependency_percent": 12,
+        "ideological_alignment": 25,
+        "historical_tension": "low",
+        "key_issues": ["amazon", "trade", "democracy"]
+      },
+      "china": {
+        "opinion": 50,
+        "trade_dependency_percent": 28,
+        "ideological_alignment": -10,
+        "historical_tension": "none",
+        "key_issues": ["trade", "investment", "technology"]
+      },
+      "russia": {
+        "opinion": 35,
+        "trade_dependency_percent": 3,
+        "ideological_alignment": 5,
+        "historical_tension": "none",
+        "key_issues": ["brics", "fertilizers", "energy"]
+      },
+      "india": {
+        "opinion": 45,
+        "trade_dependency_percent": 2,
+        "ideological_alignment": 20,
+        "historical_tension": "none",
+        "key_issues": ["brics", "south_south", "pharma"]
+      },
+      "south_africa": {
+        "opinion": 50,
+        "trade_dependency_percent": 1,
+        "ideological_alignment": 30,
+        "historical_tension": "none",
+        "key_issues": ["brics", "development", "africa"]
+      },
+      "european_union": {
+        "opinion": 40,
+        "trade_dependency_percent": 15,
+        "ideological_alignment": 35,
+        "historical_tension": "low",
+        "key_issues": ["mercosur_deal", "amazon", "trade"]
+      },
+      "argentina": {
+        "opinion": 55,
+        "trade_dependency_percent": 6,
+        "ideological_alignment": 20,
+        "historical_tension": "low",
+        "key_issues": ["mercosur", "trade", "regional"]
+      },
+      "venezuela": {
+        "opinion": 15,
+        "trade_dependency_percent": 1,
+        "ideological_alignment": -30,
+        "historical_tension": "medium",
+        "key_issues": ["refugees", "ideology", "border"]
+      }
+    }
+  },
+
+  "geography": {
+    "area_km2": 8515767,
+    "coastline_km": 7491,
+    "borders": ["argentina", "bolivia", "colombia", "french_guiana", "guyana", "paraguay", "peru", "suriname", "uruguay", "venezuela"],
+    "regions": [
+      {
+        "id": "north",
+        "name": "Norte",
+        "population_millions": 18.9,
+        "gdp_share_percent": 5.8,
+        "main_activity": "mining_agriculture",
+        "political_lean": "center"
+      },
+      {
+        "id": "northeast",
+        "name": "Nordeste",
+        "population_millions": 57.4,
+        "gdp_share_percent": 14.2,
+        "main_activity": "services_agriculture",
+        "political_lean": "left"
+      },
+      {
+        "id": "southeast",
+        "name": "Sudeste",
+        "population_millions": 89.6,
+        "gdp_share_percent": 52.1,
+        "main_activity": "industry_services",
+        "political_lean": "right"
+      },
+      {
+        "id": "south",
+        "name": "Sul",
+        "population_millions": 30.2,
+        "gdp_share_percent": 17.0,
+        "main_activity": "agriculture_industry",
+        "political_lean": "right"
+      },
+      {
+        "id": "center_west",
+        "name": "Centro-Oeste",
+        "population_millions": 16.7,
+        "gdp_share_percent": 10.9,
+        "main_activity": "agriculture",
+        "political_lean": "right"
+      }
+    ],
+    "strategic_resources": ["oil", "iron_ore", "niobium", "freshwater", "arable_land", "hydroelectric"],
+    "environmental_concerns": ["amazon_deforestation", "pantanal_fires", "water_pollution"]
+  },
+
+  "demographics": {
+    "population_millions": 215,
+    "population_growth_percent": 0.5,
+    "median_age": 34,
+    "urban_percent": 87,
+    "literacy_percent": 93,
+    "life_expectancy": 76,
+    "fertility_rate": 1.7,
+    "ethnic_composition": {
+      "white": 43,
+      "mixed": 47,
+      "black": 8,
+      "asian": 1,
+      "indigenous": 1
+    },
+    "religion_composition": {
+      "catholic": 50,
+      "evangelical": 31,
+      "no_religion": 10,
+      "spiritist": 3,
+      "other": 6
+    },
+    "languages": ["portuguese"],
+    "hdi": 0.754
+  },
+
+  "unique_challenges": [
+    {
+      "id": "amazon_dilemma",
+      "name": "Dilema da Amazônia",
+      "description": "Pressão internacional por preservação vs. pressão interna por desenvolvimento",
+      "affected_metrics": ["diplomacy", "economy", "environment", "indigenous_opinion"],
+      "recurring": true
+    },
+    {
+      "id": "extreme_polarization",
+      "name": "Polarização Extrema",
+      "description": "Divisão ideológica profunda entre esquerda e direita",
+      "affected_metrics": ["stability", "polarization", "legitimacy"],
+      "recurring": true
+    },
+    {
+      "id": "inequality_trap",
+      "name": "Armadilha da Desigualdade",
+      "description": "Uma das maiores desigualdades do mundo dificulta crescimento sustentável",
+      "affected_metrics": ["gini", "tension", "approval"],
+      "recurring": true
+    },
+    {
+      "id": "institutional_tension",
+      "name": "Tensão Institucional",
+      "description": "Conflitos frequentes entre Executivo, Legislativo e Judiciário",
+      "affected_metrics": ["stability", "legitimacy", "democracy_index"],
+      "recurring": true
+    }
+  ],
+
+  "unique_opportunities": [
+    {
+      "id": "agricultural_superpower",
+      "name": "Superpotência Agrícola",
+      "description": "Um dos maiores produtores e exportadores de alimentos do mundo",
+      "potential_benefits": ["economy", "diplomacy", "food_security"]
+    },
+    {
+      "id": "renewable_energy_leader",
+      "name": "Líder em Energia Renovável",
+      "description": "Matriz energética já majoritariamente limpa (hidro, etanol, eólica)",
+      "potential_benefits": ["environment", "diplomacy", "energy_independence"]
+    },
+    {
+      "id": "regional_leadership",
+      "name": "Liderança Regional",
+      "description": "Maior economia e população da América Latina",
+      "potential_benefits": ["diplomacy", "soft_power", "trade"]
+    },
+    {
+      "id": "demographic_dividend",
+      "name": "Bônus Demográfico",
+      "description": "População jovem ainda pode impulsionar crescimento",
+      "potential_benefits": ["economy", "innovation"],
+      "time_limited": true,
+      "deadline_years": 15
+    }
+  ],
+
+  "starting_events_queue": [
+    "bra_economic_outlook_2025",
+    "bra_amazon_pressure"
+  ],
+
+  "victory_modifiers": {
+    "democratic_stability": {
+      "difficulty": "medium",
+      "unique_challenges": ["polarization_reduction_harder"],
+      "unique_advantages": ["strong_institutions"]
+    },
+    "capitalist_hegemony": {
+      "difficulty": "medium",
+      "unique_challenges": ["infrastructure_deficit", "inequality_ceiling"],
+      "unique_advantages": ["agribusiness_power", "resource_wealth"]
+    },
+    "socialist_transition": {
+      "difficulty": "hard",
+      "unique_challenges": ["elite_resistance", "military_suspicion", "us_pressure"],
+      "unique_advantages": ["organized_labor", "land_reform_history"]
+    },
+    "popular_revolution": {
+      "difficulty": "very_hard",
+      "unique_challenges": ["military_intervention_likely", "regional_isolation"],
+      "unique_advantages": ["mass_movements_tradition", "msm_infrastructure"]
+    },
+    "nationalist_authoritarianism": {
+      "difficulty": "medium",
+      "unique_challenges": ["democratic_tradition", "international_pressure"],
+      "unique_advantages": ["military_support_base", "religious_conservative_base"]
+    },
+    "regional_sovereignty": {
+      "difficulty": "medium",
+      "unique_challenges": ["us_influence", "argentina_competition"],
+      "unique_advantages": ["largest_economy", "brics_member", "soft_power"]
+    }
+  },
+
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2025-01-01",
+    "data_sources": [
+      "World Bank",
+      "IMF",
+      "IBGE",
+      "Banco Central do Brasil",
+      "IPEA",
+      "Freedom House",
+      "Transparency International"
+    ],
+    "notes": "Dados aproximados para início de 2025, baseados em projeções de 2024"
+  }
+}

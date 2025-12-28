@@ -1,6 +1,6 @@
 # Análise e Revisão do GDD
 
-## [Nome do Jogo — A Definir]
+## VOLUTION
 
 **Versão da Análise:** 1.0
 **Data:** Dezembro 2025
@@ -48,12 +48,12 @@ O GDD v0.1 apresenta uma visão ambiciosa e bem fundamentada para um grand strat
 
 | Lacuna | Impacto | Recomendação |
 |--------|---------|--------------|
-| Nome do jogo indefinido | Médio | Definir até fase de protótipo; considerar: "Realpolitik", "Hegemony", "The State" |
+| ~~Nome do jogo indefinido~~ | ~~Médio~~ | ✅ **RESOLVIDO**: Nome definido como **VOLUTION** |
 | Duração da partida não especificada | Alto | Definir: quantos "turnos" ou tempo real até condição de vitória? |
 | Progressão entre partidas | Alto | Sistema de meta-progressão? Unlocks? Achievements? |
 
 ### 🔧 Inconsistências
-- Classificação "16+" vs Público-alvo "18+" — padronizar para evitar confusão
+- ~~Classificação "16+" vs Público-alvo "18+"~~ — ✅ **RESOLVIDO**: Padronizado para 16+
 
 ---
 
