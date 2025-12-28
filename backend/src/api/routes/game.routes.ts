@@ -2,6 +2,7 @@ import { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import { z } from 'zod';
 import { gameService } from '../../services/game.service.js';
 import { turnProcessor } from '../../services/turn-processor.service.js';
+import { eventService } from '../../services/event.service.js';
 import {
   isAppError,
   formatErrorResponse,
@@ -211,29 +212,86 @@ export async function gameRoutes(
 
   // GET /:gameId/events - Get pending events
   app.get('/:gameId/events', async (request, reply) => {
-    const { gameId } = request.params as { gameId: string };
+    try {
+      const { gameId } = request.params as { gameId: string };
 
-    // TODO: Implement event listing
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Event listing coming in Phase 1.3',
-      gameId,
-    });
+      const events = await eventService.getPendingEvents(
+        gameId,
+        request.user.userId
+      );
+
+      return reply.send({ events });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Get events error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to get events' },
+      });
+    }
   });
 
   // POST /:gameId/events/:eventId/respond - Respond to event
   app.post('/:gameId/events/:eventId/respond', async (request, reply) => {
-    const { gameId, eventId } = request.params as {
-      gameId: string;
-      eventId: string;
-    };
+    try {
+      const { gameId, eventId } = request.params as {
+        gameId: string;
+        eventId: string;
+      };
 
-    // TODO: Implement event response
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Event response coming in Phase 1.3',
-      gameId,
-      eventId,
-    });
+      const body = z.object({ optionId: z.string() }).safeParse(request.body);
+      if (!body.success) {
+        throw new ValidationError('Validation failed', body.error.issues);
+      }
+
+      const result = await eventService.respondToEvent(
+        gameId,
+        request.user.userId,
+        eventId,
+        body.data.optionId
+      );
+
+      // Get updated game state
+      const game = await gameService.getGame(gameId, request.user.userId);
+
+      return reply.send({
+        resolution: result,
+        state: game.state,
+      });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Respond to event error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to respond to event' },
+      });
+    }
+  });
+
+  // POST /:gameId/events/trigger - Manually trigger event evaluation (for testing)
+  app.post('/:gameId/events/trigger', async (request, reply) => {
+    try {
+      const { gameId } = request.params as { gameId: string };
+
+      // Verify ownership
+      await gameService.getGame(gameId, request.user.userId);
+
+      const triggeredEvents = await eventService.triggerEvents(gameId);
+
+      return reply.send({
+        triggeredEvents,
+        count: triggeredEvents.length,
+      });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Trigger events error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to trigger events' },
+      });
+    }
   });
 }
