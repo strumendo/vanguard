@@ -1,0 +1,62 @@
+name: Documentation CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/docs-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**'
+
+jobs:
+  validate-docs:
+    name: Validate Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
+          folder-path: 'docs/'
+          file-extension: '.md'
+          config-file: '.github/markdown-link-check-config.json'
+        continue-on-error: true
+
+      - name: Validate JSON data files
+        run: |
+          echo "Validating country data JSON files..."
+          for file in docs/data/countries/*.json; do
+            echo "Checking $file"
+            python3 -c "import json; json.load(open('$file'))" || exit 1
+          done
+          echo "All JSON files are valid"
+
+  count-todos:
+    name: Count TODOs in Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Count TODOs
+        run: |
+          echo "## TODO Count in Documentation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          TODO_COUNT=$(grep -r "TODO" docs/ --include="*.md" | wc -l)
+          echo "Found **$TODO_COUNT** TODOs in documentation" >> $GITHUB_STEP_SUMMARY
+          if [ $TODO_COUNT -gt 0 ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### TODO Locations:" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            grep -rn "TODO" docs/ --include="*.md" | head -20 >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
