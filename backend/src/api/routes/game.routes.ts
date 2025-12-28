@@ -1,6 +1,7 @@
 import { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import { z } from 'zod';
 import { gameService } from '../../services/game.service.js';
+import { turnProcessor } from '../../services/turn-processor.service.js';
 import {
   isAppError,
   formatErrorResponse,
@@ -155,14 +156,38 @@ export async function gameRoutes(
 
   // POST /:gameId/advance - Advance to next turn
   app.post('/:gameId/advance', async (request, reply) => {
-    const { gameId } = request.params as { gameId: string };
+    try {
+      const { gameId } = request.params as { gameId: string };
 
-    // TODO: Implement turn advancement in TurnProcessor
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Turn advancement coming in Phase 1.2',
-      gameId,
-    });
+      const result = await turnProcessor.advanceTurn(
+        gameId,
+        request.user.userId
+      );
+
+      // Get updated game state
+      const game = await gameService.getGame(gameId, request.user.userId);
+
+      return reply.send({
+        turn: result.turn,
+        date: {
+          month: result.month,
+          year: result.year,
+        },
+        changes: result.changes,
+        expiredEffects: result.expiredEffects,
+        triggeredEvents: result.triggeredEvents,
+        warnings: result.warnings,
+        state: game.state,
+      });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Advance turn error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to advance turn' },
+      });
+    }
   });
 
   // DELETE /:gameId - Delete game
