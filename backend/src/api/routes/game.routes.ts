@@ -1,5 +1,13 @@
 import { FastifyInstance, FastifyPluginOptions } from 'fastify';
 import { z } from 'zod';
+import { gameService } from '../../services/game.service.js';
+import {
+  isAppError,
+  formatErrorResponse,
+  ValidationError,
+} from '../../utils/errors.js';
+import { logger } from '../../utils/logger.js';
+import type { CountryId, Difficulty } from '../../types/game.types.js';
 
 // Validation schemas
 const createGameSchema = z.object({
@@ -23,50 +31,106 @@ export async function gameRoutes(
   app: FastifyInstance,
   _opts: FastifyPluginOptions
 ) {
+  // All routes require authentication
+  app.addHook('preHandler', app.authenticate);
+
+  // GET /countries - Get available countries for game creation
+  app.get('/countries', async (_request, reply) => {
+    try {
+      const countries = gameService.getAvailableCountries();
+      return reply.send({ countries });
+    } catch (error) {
+      logger.error('Get countries error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to get countries' },
+      });
+    }
+  });
+
   // GET / - List all user's games
-  app.get('/', async (_request, reply) => {
-    // TODO: Implement game listing
-    // - Verify JWT
-    // - Fetch games from database
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Game listing coming soon',
-    });
+  app.get('/', async (request, reply) => {
+    try {
+      const games = await gameService.getUserGames(request.user.userId);
+      return reply.send({ games });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Get games error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to get games' },
+      });
+    }
   });
 
   // POST / - Create new game
   app.post('/', async (request, reply) => {
-    const body = createGameSchema.safeParse(request.body);
-    if (!body.success) {
-      return reply.status(400).send({
-        error: 'Validation failed',
-        details: body.error.issues,
+    try {
+      const body = createGameSchema.safeParse(request.body);
+      if (!body.success) {
+        throw new ValidationError('Validation failed', body.error.issues);
+      }
+
+      const game = await gameService.createGame({
+        userId: request.user.userId,
+        countryId: body.data.countryId as CountryId,
+        difficulty: body.data.difficulty as Difficulty,
+      });
+
+      logger.info(`Game created: ${game.id}`);
+
+      return reply.status(201).send({
+        game: {
+          id: game.id,
+          countryId: game.countryId,
+          difficulty: game.difficulty,
+          currentTurn: game.currentTurn,
+          currentMonth: game.currentMonth,
+          currentYear: game.currentYear,
+          state: game.state,
+        },
+      });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Create game error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to create game' },
       });
     }
-
-    // TODO: Implement game creation
-    // - Create game state from country template
-    // - Initialize all systems (politics, economy, diplomacy, military)
-    // - Generate initial events
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Game creation coming soon',
-      requestedCountry: body.data.countryId,
-    });
   });
 
   // GET /:gameId - Get game state
   app.get('/:gameId', async (request, reply) => {
-    const { gameId } = request.params as { gameId: string };
+    try {
+      const { gameId } = request.params as { gameId: string };
 
-    // TODO: Implement game state retrieval
-    // - Verify ownership
-    // - Return full game state
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Game state retrieval coming soon',
-      gameId,
-    });
+      const game = await gameService.getGame(gameId, request.user.userId);
+
+      return reply.send({
+        game: {
+          id: game.id,
+          countryId: game.countryId,
+          difficulty: game.difficulty,
+          currentTurn: game.currentTurn,
+          currentMonth: game.currentMonth,
+          currentYear: game.currentYear,
+          isActive: game.isActive,
+          createdAt: game.createdAt,
+          lastPlayedAt: game.lastPlayedAt,
+          state: game.state,
+        },
+      });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Get game error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to get game' },
+      });
+    }
   });
 
   // POST /:gameId/action - Execute game action
@@ -80,15 +144,10 @@ export async function gameRoutes(
       });
     }
 
-    // TODO: Implement action execution
-    // - Validate action is legal in current state
-    // - Calculate effects on all systems
-    // - Update game state
-    // - Trigger consequent events
-    // - Return updated state
+    // TODO: Implement action execution in TurnProcessor
     return reply.status(501).send({
       error: 'Not implemented',
-      message: 'Action execution coming soon',
+      message: 'Action execution coming in Phase 1.2',
       gameId,
       action: body.data.actionType,
     });
@@ -98,30 +157,31 @@ export async function gameRoutes(
   app.post('/:gameId/advance', async (request, reply) => {
     const { gameId } = request.params as { gameId: string };
 
-    // TODO: Implement turn advancement
-    // - Process all pending effects
-    // - Update NPC countries' actions
-    // - Generate new events
-    // - Calculate global effects
+    // TODO: Implement turn advancement in TurnProcessor
     return reply.status(501).send({
       error: 'Not implemented',
-      message: 'Turn advancement coming soon',
+      message: 'Turn advancement coming in Phase 1.2',
       gameId,
     });
   });
 
   // DELETE /:gameId - Delete game
   app.delete('/:gameId', async (request, reply) => {
-    const { gameId } = request.params as { gameId: string };
+    try {
+      const { gameId } = request.params as { gameId: string };
 
-    // TODO: Implement game deletion
-    // - Verify ownership
-    // - Soft delete or hard delete
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Game deletion coming soon',
-      gameId,
-    });
+      await gameService.deleteGame(gameId, request.user.userId);
+
+      return reply.send({ message: 'Game deleted' });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Delete game error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to delete game' },
+      });
+    }
   });
 
   // GET /:gameId/events - Get pending events
@@ -129,10 +189,9 @@ export async function gameRoutes(
     const { gameId } = request.params as { gameId: string };
 
     // TODO: Implement event listing
-    // - Return active events for player response
     return reply.status(501).send({
       error: 'Not implemented',
-      message: 'Event listing coming soon',
+      message: 'Event listing coming in Phase 1.3',
       gameId,
     });
   });
@@ -145,12 +204,9 @@ export async function gameRoutes(
     };
 
     // TODO: Implement event response
-    // - Validate response option
-    // - Apply effects
-    // - Trigger consequence events
     return reply.status(501).send({
       error: 'Not implemented',
-      message: 'Event response coming soon',
+      message: 'Event response coming in Phase 1.3',
       gameId,
       eventId,
     });
