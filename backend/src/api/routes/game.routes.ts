@@ -3,13 +3,14 @@ import { z } from 'zod';
 import { gameService } from '../../services/game.service.js';
 import { turnProcessor } from '../../services/turn-processor.service.js';
 import { eventService } from '../../services/event.service.js';
+import { actionService } from '../../services/action.service.js';
 import {
   isAppError,
   formatErrorResponse,
   ValidationError,
 } from '../../utils/errors.js';
 import { logger } from '../../utils/logger.js';
-import type { CountryId, Difficulty } from '../../types/game.types.js';
+import type { CountryId, Difficulty, GameSystem } from '../../types/game.types.js';
 
 // Validation schemas
 const createGameSchema = z.object({
@@ -135,24 +136,72 @@ export async function gameRoutes(
     }
   });
 
-  // POST /:gameId/action - Execute game action
-  app.post('/:gameId/action', async (request, reply) => {
-    const { gameId } = request.params as { gameId: string };
-    const body = gameActionSchema.safeParse(request.body);
-    if (!body.success) {
-      return reply.status(400).send({
-        error: 'Validation failed',
-        details: body.error.issues,
+  // GET /:gameId/actions - Get available actions
+  app.get('/:gameId/actions', async (request, reply) => {
+    try {
+      const { gameId } = request.params as { gameId: string };
+      const { category } = request.query as { category?: string };
+
+      const actions = await actionService.getAvailableActions(
+        gameId,
+        request.user.userId,
+        category as GameSystem | undefined
+      );
+
+      return reply.send({
+        actions: actions.map((a) => ({
+          id: a.id,
+          type: a.type,
+          category: a.category,
+          name: a.name,
+          description: a.description,
+          cost: a.cost,
+          cooldownTurns: a.cooldownTurns,
+        })),
+      });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Get actions error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to get actions' },
       });
     }
+  });
 
-    // TODO: Implement action execution in TurnProcessor
-    return reply.status(501).send({
-      error: 'Not implemented',
-      message: 'Action execution coming in Phase 1.2',
-      gameId,
-      action: body.data.actionType,
-    });
+  // POST /:gameId/action - Execute game action
+  app.post('/:gameId/action', async (request, reply) => {
+    try {
+      const { gameId } = request.params as { gameId: string };
+      const body = z.object({ actionId: z.string() }).safeParse(request.body);
+
+      if (!body.success) {
+        throw new ValidationError('Validation failed', body.error.issues);
+      }
+
+      const result = await actionService.executeAction(
+        gameId,
+        request.user.userId,
+        body.data.actionId
+      );
+
+      // Get updated game state
+      const game = await gameService.getGame(gameId, request.user.userId);
+
+      return reply.send({
+        result,
+        state: game.state,
+      });
+    } catch (error) {
+      if (isAppError(error)) {
+        return reply.status(error.statusCode).send(formatErrorResponse(error));
+      }
+      logger.error('Execute action error:', error);
+      return reply.status(500).send({
+        error: { code: 'INTERNAL_ERROR', message: 'Failed to execute action' },
+      });
+    }
   });
 
   // POST /:gameId/advance - Advance to next turn
